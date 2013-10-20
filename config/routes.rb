@@ -1,4 +1,15 @@
 PraticoFrescoApp::Application.routes.draw do
+  get("/home", { :controller => "pages", :action => "pag_inicial"})
+  get("/sign_up", { :controller => "pages", :action => "pag_registrar"})
+  get("/sign_in", { :controller => "pages", :action => "pag_entrar"})
+
+  get("/search", { :controller => "pages", :action => "pag_busca"})
+  get("/itens", { :controller => "pages", :action => "pag_itens"})
+  get("/cart", { :controller => "pages", :action => "pag_carrinho"})
+  get("/check_out", { :controller => "pages", :action => "pag_sair"})
+
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -39,7 +50,7 @@ PraticoFrescoApp::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
@@ -53,4 +64,4 @@ PraticoFrescoApp::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
